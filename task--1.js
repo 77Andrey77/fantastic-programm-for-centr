@@ -4,7 +4,7 @@ let outputLEl = document.querySelector('#outputL');
 
 inputLEl.oninput = function () {
     if (inputLEl.value === '') {
-        outputLEl.textContent = '0'
+        outputLEl.textContent = 0
     } else { outputLEl.textContent = inputLEl.value; }
 }
 
@@ -15,7 +15,7 @@ let outputREl = document.querySelector('#outputR');
 
 inputREl.oninput = function () {
     if (inputREl.value === '') {
-        outputREl.textContent = '0'
+        outputREl.textContent = 0
     } else { outputREl.textContent = inputREl.value; }
 }
 // для вертикальной координты
@@ -24,7 +24,7 @@ let outputVEl = document.querySelector('#outputV');
 
 inputVEl.oninput = function () {
     if (inputVEl.value === '') {
-        outputVEl.textContent = '0'
+        outputVEl.textContent = 0
     } else { outputVEl.textContent = inputVEl.value; }
 }
 ///////////////////////////////////////////////////////////
@@ -49,7 +49,12 @@ inputLeftUpEl.oninput = function () {
 inputRightUpEl.oninput = function () {
     if (inputRightUpEl.value === "") {
         outputREl.textContent= Number(inputREl.value)+0
-    } else {
+    } else if (inputRightUpEl.value === inputLeftUpEl.value) {
+        outputLEl.textContent = Number(inputLEl.value)
+        outputREl.textContent= Number(inputREl.value)
+        outputVEl.textContent = Number(outputVEl.textContent) - Number(inputRightUpEl.value)/2 +Number(inputRightUpEl.value)
+    }
+    else {
         outputREl.textContent = Number(inputREl.value) + Number(inputRightUpEl.value) / 2
         outputVEl.textContent= Number(outputVEl.textContent)+ Number(inputRightUpEl.value) / 2
     }
