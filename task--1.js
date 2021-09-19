@@ -12,11 +12,27 @@ inputLEl.oninput = function () {
 
 let inputREl = document.querySelector('#G-right');
 let outputREl = document.querySelector('#outputR');
+let outputLuft = document.querySelector('#luft');
+
 
 inputREl.oninput = function () {
     if (inputREl.value === '') {
         outputREl.textContent = 0
-    } else { outputREl.textContent = inputREl.value; }
+    } else if (Number(inputLEl.value) > Number(inputREl.value)) {
+        outputREl.textContent = inputREl.value;
+        outputLuft.textContent=Math.abs(Number(outputREl.textContent)-Number(outputLEl.textContent)) ;
+    } else if (Number(inputLEl.value) < Number(inputREl.value)) {
+        outputREl.textContent = inputREl.value;
+        outputLuft.textContent=Math.abs(Number(outputLEl.textContent)-Number(outputREl.textContent)) ; 
+    } else {
+        outputREl.textContent = inputREl.value;
+        outputLuft.textContent =Math.abs(Number(outputLEl.textContent) - Number(outputREl.textContent)) ;
+    }
+    //{
+       // outputREl.textContent = inputREl.value;
+      //  if (Number(inputLEl.value) > Number(inputREl.value)) {
+      //       outputLuft.textContent = Number(outputLEl.textContent)-Number(outputREl.textContent);
+       // } }
 }
 // для вертикальной координты
 let inputVEl = document.querySelector('#Vertikal');

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -17,36 +20,40 @@
         <h2>Шпонка в корпусе</h2>
         <!--значения полученные при измерении-->
 
-        <input type="number" placeholder="Гор. лев" id="G-left"/>
-        <h3>Гор лев = <span id="outputL">0</span></h3> 
-
-        <input type="number" placeholder="Гор. прав" id="G-right">
-        <h3>Гор прав = <span id="outputR">0</span></h3>
-
-        <input type="number" placeholder="Вертикаль" id="Vertikal"> 
-        <h3>Вертикаль = <span id="outputV">0</span></h3>
+        <div class="coordinats">
+            <input type="number" placeholder="коорд. гор. лев" id="G-left" />
+            <h3 class="outputL">Лев= <span id="outputL">0</span></h3>
+            
+            <input type="number" placeholder="коорд. гор. прав" id="G-right">
+            <h3 class="outputR">Прав= <span id="outputR">0</span></h3>
+            
+            <input type="number" placeholder="коорд. вертикальн" id="Vertikal">
+            <h3 class="outputV">Верт= <span id="outputV">0</span></h3>
+        </div>
         <br>
 
         <!--величина на какую надо изменить значение-->
         
-        <input type="number"id="up-left">
-        <input type="number"id="up-right">
-        <input type="number"id="down-left">
-        <input type="number"id="down-right">
+        <input class="up-left" type="number"id="up-left">
+        <input class="up-right" type="number"id="up-right">
+        <input class="down-left" type="number"id="down-left">
+        <input class="down-right" type="number"id="down-right">
 
-
-<img src="./png/arrow-up-left.png" alt="up-left">
-<img src="./png/arrow-up-right.png" alt="up-right">
-<h4>При визировании с регулятора + вверх и вправо </h4>
-        <img src="./image/шпонка в корпусе.jpg" alt="изображение шпонки в корпусе" width="600">
+<h3 class="luft">Люфт =  <samp id="luft"></samp> </h3>
+<img class="st-up-left" src="./png/arrow-up-left.png" alt="up-left">
+<img class="st-up-right" src="./png/arrow-up-right.png" alt="up-right">
+<h5>При визировании с РЕГУЛЯТОРА "+" вверх и вправо </h5>
+        <img class="foto" src="./image/шпонка в корпусе.jpg" alt="изображение шпонки в корпусе" width="600">
     </section>
 
-    <!--секция если шпонка в детали-->
+    <!--секция если шпонка в детали
     <section>
         <h2>Шпонка в обойме</h2>
         <img src="./image/шпонка в обойме.jpg" alt="изображение шпонки в обойме" width="600">
 
     </section>
+    -->
+    
 <script type="module" src="./task--1.js"></script>
 </body>
 
