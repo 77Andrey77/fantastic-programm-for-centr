@@ -23,6 +23,7 @@ a {
 body {
   background-color: #4b5380;
   color: #212121;
+  width: 1300px;
 }
 
 section {
@@ -72,7 +73,7 @@ h5 {
 }
 .outputR {
   position: absolute;
-  left: 690px;
+  left: 680px;
   top: 330px;
   font-size: 32px;
 }
@@ -81,6 +82,20 @@ h5 {
   left: 600px;
   top: 440px;
   font-size: 32px;
+}
+.outputLLedge {
+  position: absolute;
+  left: 100px;
+  top: 350px;
+  font-size: 26px;
+  background-color: #fa4343;
+}
+.outputRLedge {
+  position: absolute;
+  left: 980px;
+  top: 350px;
+  font-size: 26px;
+  background-color: #fa4343;
 }
 .up-left {
   position: absolute;
@@ -102,7 +117,7 @@ h5 {
   position: absolute;
   left: 500px;
   top: 555px;
-  background-color: #c8e4c0;
+  background-color: #e9e8f5;
   width: 100px;
   font-size: 32px;
 }
@@ -110,7 +125,7 @@ h5 {
   position: absolute;
   left: 710px;
   top: 555px;
-  background-color: #c8e4c0;
+  background-color: #e9e8f5;
   width: 100px;
   font-size: 32px;
 }

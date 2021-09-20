@@ -43,6 +43,22 @@ inputVEl.oninput = function () {
         outputVEl.textContent = 0
     } else { outputVEl.textContent = inputVEl.value; }
 }
+//выступание - западание
+let inputLLedgeEl = document.querySelector('#LLedge');
+let outputLLedgeEl = document.querySelector('#outputLLedge');
+inputLLedgeEl.oninput = function () {
+    outputLLedgeEl.textContent = inputLLedgeEl.value;
+}
+//////////
+let inputRLedgeEl = document.querySelector('#RLedge');
+let outputRLedgeEl = document.querySelector('#outputRLedge');
+inputRLedgeEl.oninput = function () {
+    outputRLedgeEl.textContent = inputRLedgeEl.value;
+}
+//////////////проверка выступани западания
+//if (Number(outputRLedgeEl.textContent) === Number(outputLLedgeEl.textContent)) {}
+
+
 ///////////////////////////////////////////////////////////
 
 //делаем перемещение для изменения значений координаt
@@ -58,7 +74,8 @@ inputLeftUpEl.oninput = function () {
         outputLEl.textContent= Number(inputLEl.value) + 0
     } else {
         outputLEl.textContent = Number(inputLEl.value) + Number(inputLeftUpEl.value) / 2
-        outputVEl.textContent= Number(inputVEl.value) + Number(inputLeftUpEl.value) / 2
+        outputVEl.textContent = Number(inputVEl.value) + Number(inputLeftUpEl.value) / 2
+        outputLLedgeEl.textContent = Number(inputLLedgeEl.value)+ Number(inputLeftUpEl.value)
     }
 }
 
@@ -68,11 +85,13 @@ inputRightUpEl.oninput = function () {
     } else if (inputRightUpEl.value === inputLeftUpEl.value) {
         outputLEl.textContent = Number(inputLEl.value)
         outputREl.textContent= Number(inputREl.value)
-        outputVEl.textContent = Number(outputVEl.textContent) - Number(inputRightUpEl.value)/2 +Number(inputRightUpEl.value)
+        outputVEl.textContent = Number(outputVEl.textContent) - Number(inputRightUpEl.value) / 2 + Number(inputRightUpEl.value)
+        outputRLedgeEl.textContent = Number(inputRLedgeEl.value)+Number(inputRightUpEl.value)
     }
     else {
         outputREl.textContent = Number(inputREl.value) + Number(inputRightUpEl.value) / 2
-        outputVEl.textContent= Number(outputVEl.textContent)+ Number(inputRightUpEl.value) / 2
+        outputVEl.textContent = Number(outputVEl.textContent) + Number(inputRightUpEl.value) / 2
+        outputRLedgeEl.textContent = Number(inputRLedgeEl.value)+Number(inputRightUpEl.value)
     }
 }
 
