@@ -1,29 +1,24 @@
-@charset "UTF-8";
-.list {
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
+html {
+  height: 100%;
+  width: 100%;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-  margin: 0;
-}
-
-.link {
-  text-decoration: none;
-}
-
 body {
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
   background-color: #4b5380;
   color: #212121;
-  width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  position: relative;
 }
 
 section {
@@ -32,20 +27,25 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding-top: 50px;
-  width: 1200px;
+  width: 100%;
 }
 
-h2 {
+.title-section {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   text-align: center;
   font-size: 50px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
-h5 {
+
+.info-text {
   font-size: 30px;
   text-align: center;
+  margin: 30px 0;
 }
 .coordinats {
-  background-color: rgb(86, 51, 211);
+  /* background-color: rgb(63, 240, 72); */
   display: block;
   text-align: center;
 }
@@ -53,88 +53,115 @@ h5 {
   font-size: 32px;
   text-align: center;
   background-color: rgb(201, 201, 243);
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 .st-up-left {
   position: absolute;
-  left: 690px;
-  top: 520px;
+  left: 555px;
+  top: 230px;
+  z-index: 2;
 }
 .st-up-right {
   position: absolute;
-  left: 600px;
-  top: 520px;
+  left: 465px;
+  top: 230px;
+  z-index: 2;
 }
+.wrapper-img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
 .outputL {
   position: absolute;
-  left: 500px;
-  top: 330px;
+  left: 270px;
+  top: 5px;
   font-size: 32px;
+  z-index: 2;
 }
 .outputR {
   position: absolute;
-  left: 680px;
-  top: 330px;
+  left: 640px;
+  top: 5px;
   font-size: 32px;
+  z-index: 2;
 }
 .outputV {
   position: absolute;
-  left: 600px;
-  top: 440px;
+  left: 450px;
+  top: 150px;
   font-size: 32px;
+  z-index: 2;
 }
 .outputLLedge {
   position: absolute;
-  left: 100px;
-  top: 350px;
+  left: 10px;
+  top: 40px;
   font-size: 26px;
   background-color: #fa4343;
+  z-index: 2;
+}
+.lValue {
+  margin: 30px;
+  /* background-color: aliceblue; */
 }
 .outputRLedge {
   position: absolute;
-  left: 980px;
-  top: 350px;
+  left: 850px;
+  top: 40px;
   font-size: 26px;
   background-color: #fa4343;
+  z-index: 2;
+}
+.rValue {
+  margin: 30px;
+  /* background-color: aliceblue; */
 }
 .up-left {
   position: absolute;
-  left: 360px;
-  top: 370px;
+  left: 230px;
+  top: 100px;
   background-color: #e9e8f5;
   width: 90px;
   font-size: 32px;
+  z-index: 2;
 }
 .up-right {
   position: absolute;
-  left: 865px;
-  top: 370px;
+  left: 725px;
+  top: 100px;
   background-color: #e9e8f5;
   width: 90px;
   font-size: 32px;
+  z-index: 2;
 }
 .down-left {
   position: absolute;
-  left: 500px;
-  top: 555px;
+  left: 330px;
+  top: 270px;
   background-color: #e9e8f5;
   width: 100px;
   font-size: 32px;
+  z-index: 2;
 }
 .down-right {
   position: absolute;
-  left: 710px;
-  top: 555px;
+  left: 610px;
+  top: 270px;
   background-color: #e9e8f5;
   width: 100px;
   font-size: 32px;
+  z-index: 2;
 }
 
 .foto {
-  margin-left: 25%;
-  padding-bottom: 50px;
-  padding-top: 20px;
+  position: relative;
+  padding-bottom: 20px;
 }
 input {
   font-size: 22px;
+  width: 200px;
 }

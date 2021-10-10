@@ -6,62 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
 </head>
 
 <body>
     <!-- Шапка сайта-->
     <header></header>
+<div class="wrapper">
 
     <!--секция если шпонка в корпусе-->
     <section>
-        <h2>Шпонка в корпусе</h2>
+        
+        <h2 class="title-section">Шпонка в корпусе</h2>
+
+
         <!--значения полученные при измерении-->
-
         <div class="coordinats">
-            <input type="number" placeholder="коорд. гор. лев" id="G-left" />
-            <h3 class="outputL">Лев= <span id="outputL">0</span></h3>
-            
-            <input type="number" placeholder="коорд. гор. прав" id="G-right">
-            <h3 class="outputR">Прав= <span id="outputR">0</span></h3>
-            
-            <input type="number" placeholder="коорд. вертикальн" id="Vertikal">
-            <h3 class="outputV">Верт= <span id="outputV">0</span></h3>
-
-<!--добавляем поля для значений выступания и западания-->
+            <input type="number" placeholder="Корд. гор. лев" id="G-left" />
+    
+            <input type="number" placeholder="Корд. гор. прав" id="G-right">
+    
+            <input type="number" placeholder="Корд. вертикальн" id="Vertikal">
+    
+         <!--добавляем поля для значений выступания и западания-->
             <input type="number" placeholder="Левое выст/зап" id="LLedge">
-            <h3 class="outputLLedge"> Левое выст/зап =<span id="outputLLedge">0</span></h3>
-
+    
             <input type="number" placeholder="Правое выст/зап" id="RLedge">
-            <h3 class="outputRLedge"> Правое выст/зап =<span id="outputRLedge">0</span></h3>
-
-
+    
+    
         </div>
         <br>
+    
+                <h3 class="luft">Люфт = <samp id="luft"></samp> </h3>
+                <h5 class="info-text">При визировании с РЕГУЛЯТОРА "+" вверх и вправо </h5>
+
+        <div class="wrapper-img">
+        <!--значения полученные при измерении-->
+            <h3 class="outputL">Лев= <span id="outputL">0</span></h3>
+            <h3 class="outputR">Прав= <span id="outputR">0</span></h3>
+            <h3 class="outputV">Верт= <span id="outputV">0</span></h3>
+        <!--добавляем поля для значений выступания и западания-->
+            <h3 class="outputLLedge"> Левое выст/зап <br> <span class="lValue" id="outputLLedge">0</span></h3>
+            <h3 class="outputRLedge"> Правое выст/зап <br> <span class="rValue" id="outputRLedge">0</span></h3>
+
 
         <!--величина на какую надо изменить значение-->
-        
-        <input class="up-left" type="number"id="up-left">
-        <input class="up-right" type="number"id="up-right">
-        <input class="down-left" type="number"id="down-left">
-        <input class="down-right" type="number"id="down-right">
 
-<h3 class="luft">Люфт =  <samp id="luft"></samp> </h3>
-<img class="st-up-left" src="./png/arrow-up-left.png" alt="up-left">
-<img class="st-up-right" src="./png/arrow-up-right.png" alt="up-right">
-<h5>При визировании с РЕГУЛЯТОРА "+" вверх и вправо </h5>
-        <img class="foto" src="./image/шпонка в корпусе.jpg" alt="изображение шпонки в корпусе" width="600">
+                <input class="up-left" type="number" id="up-left">
+                <input class="up-right" type="number" id="up-right">
+                <input class="down-left" type="number" id="down-left">
+                <input class="down-right" type="number" id="down-right">
+                
+                <img class="st-up-left" src="./png/arrow-up-left.png" alt="up-left">
+                <img class="st-up-right" src="./png/arrow-up-right.png" alt="up-right">
+                <img class="foto" src="./image/шпонка в корпусе.jpg" alt="изображение шпонки в корпусе" width="600">
+                <p>  Сдвинуть влево - отнять справа</p>
+
+        </div>
+   
     </section>
-
+    
     <!--секция если шпонка в детали
-    <section>
-        <h2>Шпонка в обойме</h2>
-        <img src="./image/шпонка в обойме.jpg" alt="изображение шпонки в обойме" width="600">
-
-    </section>
-    -->
+        <section>
+            <h2>Шпонка в обойме</h2>
+            <img src="./image/шпонка в обойме.jpg" alt="изображение шпонки в обойме" width="600">
+    
+        </section>
+        -->
+</div>
     
 <script type="module" src="./task--1.js"></script>
 </body>

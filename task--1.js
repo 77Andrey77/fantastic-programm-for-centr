@@ -20,13 +20,14 @@ inputREl.oninput = function () {
         outputREl.textContent = 0
     } else if (Number(inputLEl.value) > Number(inputREl.value)) {
         outputREl.textContent = inputREl.value;
-        outputLuft.textContent=Math.abs(Number(outputREl.textContent)-Number(outputLEl.textContent)) ;
+        outputLuft.textContent=Math.abs(Number.parseFloat(outputREl.textContent)-Number.parseFloat(outputLEl.textContent)) ;
     } else if (Number(inputLEl.value) < Number(inputREl.value)) {
         outputREl.textContent = inputREl.value;
-        outputLuft.textContent=Math.abs(Number(outputLEl.textContent)-Number(outputREl.textContent)) ; 
+        
+        outputLuft.textContent=Math.abs(Number.parseFloat(outputLEl.textContent)-Number.parseFloat(outputREl.textContent)) ; 
     } else {
         outputREl.textContent = inputREl.value;
-        outputLuft.textContent =Math.abs(Number(outputLEl.textContent) - Number(outputREl.textContent)) ;
+        outputLuft.textContent =Math.abs(Number.parseFloat(outputLEl.textContent) - Number.parseFloat(outputREl.textContent)) ;
     }
     //{
        // outputREl.textContent = inputREl.value;
@@ -64,49 +65,49 @@ inputRLedgeEl.oninput = function () {
 //делаем перемещение для изменения значений координаt
 
 let inputLeftUpEl = document.querySelector('#up-left');
-let inputRightUpEl = document.querySelector('#up-right');
+let inputRightUpEl = document.querySelector('#up-right');  ////////
 let inputLeftDownEl = document.querySelector('#down-left');
 let inputRightDownEl = document.querySelector('#down-right');
 
 
 inputLeftUpEl.oninput = function () {
     if (inputLeftUpEl.value === "") {
-        outputLEl.textContent= Number(inputLEl.value) + 0
+        outputLEl.textContent= Number.parseFloat(inputLEl.value) + 0
     } else {
-        outputLEl.textContent = Number(inputLEl.value) + Number(inputLeftUpEl.value) / 2
-        outputVEl.textContent = Number(inputVEl.value) + Number(inputLeftUpEl.value) / 2
-        outputLLedgeEl.textContent = Number(inputLLedgeEl.value)+ Number(inputLeftUpEl.value)
+        outputLEl.textContent = Number.parseFloat(inputLEl.value) + Number.parseFloat(inputLeftUpEl.value) / 2
+        outputVEl.textContent = Number.parseFloat(inputVEl.value) + Number(inputLeftUpEl.value) / 2
+        outputLLedgeEl.textContent = Number.parseFloat(inputLLedgeEl.value)+ Number.parseFloat(inputLeftUpEl.value)
     }
 }
 
 inputRightUpEl.oninput = function () {
     if (inputRightUpEl.value === "") {
-        outputREl.textContent= Number(inputREl.value)+0
+        outputREl.textContent= Number.parseFloat(inputREl.value)+0
     } else if (inputRightUpEl.value === inputLeftUpEl.value) {
-        outputLEl.textContent = Number(inputLEl.value)
-        outputREl.textContent= Number(inputREl.value)
-        outputVEl.textContent = Number(outputVEl.textContent) - Number(inputRightUpEl.value) / 2 + Number(inputRightUpEl.value)
-        outputRLedgeEl.textContent = Number(inputRLedgeEl.value)+Number(inputRightUpEl.value)
+        outputLEl.textContent = Number.parseFloat(inputLEl.value)
+        outputREl.textContent= Number.parseFloat(inputREl.value)
+        outputVEl.textContent = Number.parseFloat(outputVEl.textContent) - Number.parseFloat(inputRightUpEl.value) / 2 + Number(inputRightUpEl.value)
+        outputRLedgeEl.textContent = Number.parseFloat(inputRLedgeEl.value)+Number.parseFloat(inputRightUpEl.value)
     }
     else {
-        outputREl.textContent = Number(inputREl.value) + Number(inputRightUpEl.value) / 2
-        outputVEl.textContent = Number(outputVEl.textContent) + Number(inputRightUpEl.value) / 2
-        outputRLedgeEl.textContent = Number(inputRLedgeEl.value)+Number(inputRightUpEl.value)
+        outputREl.textContent = Number.parseFloat(inputREl.value) + Number.parseFloat(inputRightUpEl.value) / 2
+        outputVEl.textContent = Number.parseFloat(outputVEl.textContent) + Number.parseFloat(inputRightUpEl.value) / 2
+        outputRLedgeEl.textContent = Number.parseFloat(inputRLedgeEl.value)+Number.parseFloat(inputRightUpEl.value)
     }
 }
 
 inputLeftDownEl.oninput = function () {
     if (inputLeftDownEl === "") {
-        outputLEl.textContent= Number(inputLEl.value) + 0
+        outputLEl.textContent= Number.parseFloat(inputLEl.value) + 0
     } else {
-       outputLEl.textContent = Number(outputLEl.textContent) + Number(inputLeftDownEl.value)
+       outputLEl.textContent = Number.parseFloat(outputLEl.textContent) + Number.parseFloat(inputLeftDownEl.value)
     }
 }
 
 inputRightDownEl.oninput = function () {
     if (inputRightDownEl === "") {
-        outputREl.textContent= Number(inputREl.value) + 0
+        outputREl.textContent= Number.parseFloat(inputREl.value) + 0
     } else {
-        outputREl.textContent= Number(outputREl.textContent)+ Number(inputRightDownEl.value)
+        outputREl.textContent= Number.parseFloat(outputREl.textContent)+ Number.parseFloat(inputRightDownEl.value)
     }
 }
