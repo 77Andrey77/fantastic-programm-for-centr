@@ -58,63 +58,69 @@ section {
 .st-up-left {
   position: absolute;
   left: 555px;
-  top: 230px;
+  top: 270px;
   z-index: 2;
 }
 .st-up-right {
   position: absolute;
   left: 465px;
-  top: 230px;
+  top: 270px;
   z-index: 2;
 }
 .wrapper-img {
+  padding-top: 40px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  background-color: #ffffff;
 }
 
 .outputL {
   position: absolute;
-  left: 270px;
-  top: 5px;
+  left: 110px;
+  top: 80px;
   font-size: 32px;
   z-index: 2;
 }
 .outputR {
   position: absolute;
-  left: 640px;
-  top: 5px;
+  left: 790px;
+  top: 80px;
   font-size: 32px;
   z-index: 2;
 }
 .outputV {
   position: absolute;
   left: 450px;
-  top: 150px;
+  top: 190px;
   font-size: 32px;
   z-index: 2;
 }
+/* /////////////// */
 .outputLLedge {
   position: absolute;
-  left: 10px;
-  top: 40px;
+  left: 270px;
+  top: 15px;
   font-size: 26px;
   background-color: #fa4343;
   z-index: 2;
 }
+
 .lValue {
   margin: 30px;
   /* background-color: aliceblue; */
 }
 .outputRLedge {
   position: absolute;
-  left: 850px;
-  top: 40px;
+  left: 600px;
+  top: 15px;
   font-size: 26px;
   background-color: #fa4343;
   z-index: 2;
+}
+.output-ok {
+  background-color: #35e62f;
 }
 .rValue {
   margin: 30px;
@@ -123,7 +129,7 @@ section {
 .up-left {
   position: absolute;
   left: 230px;
-  top: 100px;
+  top: 140px;
   background-color: #e9e8f5;
   width: 90px;
   font-size: 32px;
@@ -132,7 +138,7 @@ section {
 .up-right {
   position: absolute;
   left: 725px;
-  top: 100px;
+  top: 140px;
   background-color: #e9e8f5;
   width: 90px;
   font-size: 32px;
@@ -141,7 +147,7 @@ section {
 .down-left {
   position: absolute;
   left: 330px;
-  top: 270px;
+  top: 310px;
   background-color: #e9e8f5;
   width: 100px;
   font-size: 32px;
@@ -150,7 +156,7 @@ section {
 .down-right {
   position: absolute;
   left: 610px;
-  top: 270px;
+  top: 310px;
   background-color: #e9e8f5;
   width: 100px;
   font-size: 32px;
