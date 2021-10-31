@@ -30,6 +30,32 @@ section {
   width: 100%;
 }
 
+/* .elips-img {
+} */
+.elips-box {
+  position: relative;
+  margin-top: 20px;
+}
+.elips-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.elips-title {
+  position: absolute;
+  font-size: 30px;
+  top: 65px;
+  left: 650px;
+}
+.arrow-elips {
+  position: absolute;
+  top: 55px;
+  left: 600px;
+}
+.arrow-rotate {
+  transform: rotate(90deg);
+}
+
 .title-section {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -42,7 +68,7 @@ section {
 .info-text {
   font-size: 30px;
   text-align: center;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 .coordinats {
   /* background-color: rgb(63, 240, 72); */
@@ -76,6 +102,9 @@ section {
   background-color: #ffffff;
 }
 
+.deactiv {
+  opacity: 0;
+}
 .outputL {
   position: absolute;
   left: 110px;
@@ -90,6 +119,24 @@ section {
   font-size: 32px;
   z-index: 2;
 }
+
+.outputL-fin {
+  position: absolute;
+  left: 110px;
+  top: 80px;
+  font-size: 32px;
+  z-index: 2;
+  /* color: #542de0; */
+  /* opacity: 0; */
+}
+.outputR-fin {
+  position: absolute;
+  left: 790px;
+  top: 80px;
+  font-size: 32px;
+  z-index: 2;
+}
+
 .outputV {
   position: absolute;
   left: 450px;
@@ -103,7 +150,7 @@ section {
   left: 270px;
   top: 15px;
   font-size: 26px;
-  background-color: #fa4343;
+  /* background-color: #f38080; */
   z-index: 2;
 }
 
@@ -116,7 +163,7 @@ section {
   left: 600px;
   top: 15px;
   font-size: 26px;
-  background-color: #fa4343;
+  /* background-color: #f38080; */
   z-index: 2;
 }
 .output-ok {

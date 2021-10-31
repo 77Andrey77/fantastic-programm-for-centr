@@ -1,6 +1,6 @@
 // для левой горизонтальной координты
 let inputLEl = document.querySelector('#G-left');  //ввод левой координаты
-let outputLEl = document.querySelector('#outputL');  //вывод левойкоординаты
+let outputLEl = document.querySelector('#outputL');  //вывод левой координаты
 
 inputLEl.oninput = function () {
     if (inputLEl.value === '') {
@@ -69,14 +69,14 @@ let outputRLedgeElClass = document.querySelector('.outputRLedge');
 inputRLedgeEl.oninput = function () {
     outputRLedgeEl.textContent = inputRLedgeEl.value;
     rightLedge = outputRLedgeEl.textContent;
-console.log(rightLedge);
-    ////смена цвета
-    if (leftLedge === rightLedge) {
-        outputLLedgeElClass.classList.add('output-ok');
-        outputRLedgeElClass.classList.add('output-ok');
-    } else {
-        outputLLedgeElClass.classList.remove('output-ok');
-        outputRLedgeElClass.classList.remove('output-ok'); }
+// console.log(rightLedge);
+    ////смена цвета  но добавить позже 
+    // if (leftLedge === rightLedge) {
+    //     outputLLedgeElClass.classList.add('output-ok');
+    //     outputRLedgeElClass.classList.add('output-ok');
+    // } else {
+    //     outputLLedgeElClass.classList.remove('output-ok');
+    //     outputRLedgeElClass.classList.remove('output-ok'); }
 }
 ///////////////////////////////////////////////////////////
 
@@ -90,7 +90,7 @@ let inputRightDownEl = document.querySelector('#down-right');
 
 inputLeftUpEl.oninput = function () {
     if (inputLeftUpEl.value === "") {
-        outputLEl.textContent= Number(inputLEl.value) + 0
+        outputLEl.textContent= Number(inputLEl.value) + 0  
     } else {
         outputLEl.textContent = (Number(inputLEl.value)*1000 + Number(inputLeftUpEl.value) / 2*1000)/1000
         outputVEl.textContent = (Number(inputVEl.value)*1000 + Number(inputLeftUpEl.value) / 2*1000)/1000
@@ -104,21 +104,39 @@ inputRightUpEl.oninput = function () {
     } else if (inputRightUpEl.value === inputLeftUpEl.value) {
         outputLEl.textContent = Number(inputLEl.value)
         outputREl.textContent= Number(inputREl.value)
-        outputVEl.textContent = Number(outputVEl.textContent) - Number(inputRightUpEl.value) / 2 + Number(inputRightUpEl.value)
-        outputRLedgeEl.textContent = (Number(inputRLedgeEl.value)*1000+Number(inputRightUpEl.value)*1000)/1000
+        outputVEl.textContent = (Number(inputVEl.value)*1000 + Number(inputRightUpEl.value)*1000)/1000
+        outputRLedgeEl.textContent = (Number(inputRLedgeEl.value)*1000 + Number(inputRightUpEl.value)*1000)/1000
     }
-    else {
-        outputREl.textContent = (Number(inputREl.value)*1000 + Number(inputRightUpEl.value)*1000 )/ 2000
-        outputVEl.textContent = (Number(outputVEl.textContent)*1000 + Number(inputRightUpEl.value)*1000 )/ 2000
+    else if(inputRightUpEl.value > inputLeftUpEl.value ){
+        outputLEl.textContent = Number(inputLEl.value)
+        outputREl.textContent= (Number(inputREl.value)*1000 +((inputRightUpEl.value*1000 - inputLeftUpEl.value*1000)/2))/1000
+        outputVEl.textContent = (Number(inputVEl.value)*1000+ (Number(inputLeftUpEl.value)/2)*1000 + (Number(inputRightUpEl.value)/2)*1000)/1000
+        outputRLedgeEl.textContent = (Number(inputRLedgeEl.value)*1000+ Number(inputRightUpEl.value)*1000)/1000
+    
+    } else {
+        outputLEl.textContent = (Number(inputLEl.value)*1000 +(inputLeftUpEl.value*1000 - inputRightUpEl.value*1000)/2)/1000
+        outputREl.textContent= Number(inputREl.value)
+        outputVEl.textContent = (Number(inputVEl.value)*1000+ (Number(inputLeftUpEl.value)/2)*1000 + (Number(inputRightUpEl.value)/2)*1000)/1000
         outputRLedgeEl.textContent = (Number(inputRLedgeEl.value)*1000+ Number(inputRightUpEl.value)*1000)/1000
     }
 }
+////////////// перемещения для изменения горизонтальных координат и люфта//////////////////
+
+let outputLElFin = document.querySelector('#outputL-fin');  //вывод левойкоординаты
+let outputRElFin = document.querySelector('#outputR-fin');   //вывод правой координаты
+
+
 
 inputLeftDownEl.oninput = function () {
     if (inputLeftDownEl === "") {
         outputLEl.textContent= Number(inputLEl.value) + 0
     } else {
-       outputLEl.textContent = (Number(outputLEl.textContent)*1000 + Number(inputLeftDownEl.value)*1000)/1000
+        outputLEl.classList.add('deactiv');
+        outputLElFin.classList.remove('deactiv');
+
+        outputLElFin.textContent = (Number(outputLEl.textContent)*1000 - Number(inputLeftDownEl.value)* 1000)/1000
+        
+        outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000 - Number(outputREl.textContent)*1000))/1000
     }
 }
 
@@ -126,6 +144,12 @@ inputRightDownEl.oninput = function () {
     if (inputRightDownEl === "") {
         outputREl.textContent= Number(inputREl.value) + 0
     } else {
-        outputREl.textContent= (Number(outputREl.textContent)*1000+ Number(inputRightDownEl.value)*1000)/1000
+        outputREl.classList.add('deactiv');
+        outputRElFin.classList.remove('deactiv');
+
+        outputRElFin.textContent = (Number(outputREl.textContent) * 1000 + Number(inputRightDownEl.value) * 1000) / 1000
+        
+        outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000- Number(outputRElFin.textContent)*1000))/1000
+
     }
 }

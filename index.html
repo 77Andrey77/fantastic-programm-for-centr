@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Программа центровки</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +21,43 @@
     <header></header>
 <div class="wrapper">
 
+
     <!--секция если шпонка в корпусе-->
     <section>
+
+<!-- определяем эпипс детали -->
+
+<div class="elips-container">
+    <div class="coordinats">
+            <input type="number" placeholder="a" id="a">
+            <input type="number" placeholder="b" id="b">
+            <input type="number" placeholder="c" id="c">
+    </div>
+    <div class="elips-box">
+        <img class="elips-img" src="./image/elips.jpg" alt="image for elips" />
+        
+        <h3 class="elips-title">Элипс = <span id="output-elips">0</span></h3>
+        
+        <svg class="arrow-elips" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true" role="img" width="50px" height="50px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
+            <g fill="none">
+                <path
+                    d="M5.791 6.72a.75.75 0 0 1-.002 1.061L4.566 9H8.25a.75.75 0 0 1 0 1.5H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.061l2.51-2.5a.75.75 0 0 1 1.061.002zm8.429 0a.75.75 0 0 1 1.06 0l2.5 2.5a.75.75 0 0 1 0 1.06l-2.5 2.5a.75.75 0 1 1-1.06-1.06l1.22-1.22h-3.69a.75.75 0 0 1 0-1.5h3.69l-1.22-1.22a.75.75 0 0 1 0-1.06z"
+                    fill="currentColor" />
+            </g>
+        </svg>
+    </div>
+    
+
+</div>
+
         
         <h2 class="title-section">Шпонка в корпусе</h2>
 
 
         <!--значения полученные при измерении-->
         <div class="coordinats">
-            <input type="number" placeholder="Корд. гор. лев" id="G-left" />
+            <input type="number" placeholder="Корд. гор. лев" id="G-left" >
     
             <input type="number" placeholder="Корд. гор. прав" id="G-right">
     
@@ -52,6 +80,11 @@
             <h3 class="outputL">Лев= <span id="outputL">0</span></h3>
             <h3 class="outputR">Прав= <span id="outputR">0</span></h3>
             <h3 class="outputV">Верт= <span id="outputV">0</span></h3>
+
+                            <!-- финальные значения гор координат при перемещении -->
+                            <h3 class="outputL-fin">Лев= <span id="outputL-fin" class="deactiv">0</span></h3>
+                            <h3 class="outputR-fin">Прав= <span id="outputR-fin" class="deactiv">0</span></h3>
+
         <!--добавляем поля для значений выступания и западания-->
             <h3 class="outputLLedge"> Левое выст/зап <br> <span class="lValue" id="outputLLedge">0</span></h3>
             <h3 class="outputRLedge"> Правое выст/зап <br> <span class="rValue" id="outputRLedge">0</span></h3>
@@ -67,7 +100,11 @@
                 <img class="st-up-left" src="./png/arrow-up-left.png" alt="up-left">
                 <img class="st-up-right" src="./png/arrow-up-right.png" alt="up-right">
                 <img class="foto" src="./image/шпонка в корпусе.jpg" alt="изображение шпонки в корпусе" width="600">
-                <p class="info-text">  Сдвинуть влево - отнять справа___________Сдвинуть в право - отнять слева</p>
+
+                
+                <p class="info-text"> Сдвинуть влево = "-" справа ; "+" слева</p>
+                <p class="info-text"> Сдвинуть вправо = "-" слева ; "+" справа</p>
+
 
         </div>
    
@@ -83,6 +120,7 @@
 </div>
     
 <script type="module" src="./task--1.js"></script>
+<script type="module" src="./task--2.js"></script>
 </body>
 
 </html>
