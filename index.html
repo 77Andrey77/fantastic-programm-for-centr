@@ -39,11 +39,15 @@
  
         
         <h2 class="title-section">Шпонка 
-            <select name="project-type" id="project-type" class="project-type-select">
-            <option value="in-the-case"> в корпусе</option>
-            <option value="in-the-product"> в изделии</option>
-        </select>
+           <samp id="dropdown">
+                <select name="project-type" id="project-type" class="project-type-select">
+                    <option value="1" data-img="bigImg1"> в корпусе</option>
+                    <option value="2" data-img="bigImg2"> в изделии</option>
+                </select>
+           </samp>
     </h2>
+<img id="bigImg1" class="foto-none" src="./image/в корпусе.jpg" alt="изображение шпонки в корпусе" width="500">
+<img id="bigImg2" class="foto-none" src="./image/в обойме.jpg" alt="изображение шпонки в корпусе" width="500">
 
 
         <!--значения полученные при измерении-->
@@ -99,8 +103,11 @@
                 
                 <img class="st-up-left" src="./png/arrow-up-left.png" alt="up-left">
                 <img class="st-up-right" src="./png/arrow-up-right.png" alt="up-right">
-                <img class="foto" src="./image/шпонка в корпусе.jpg" alt="изображение шпонки в корпусе" width="600">
 
+                <div class="foto" id="image">
+                    <img  src="./image/в корпусе.jpg" alt="изображение шпонки в корпусе" width="500">
+
+                </div>
                 
                 <p class="info-text"> Сдвинуть влево = "-" справа ; "+" слева</p>
                 <p class="info-text"> Сдвинуть вправо = "-" слева ; "+" справа</p>
@@ -158,6 +165,8 @@
 <script type="module" src="./task--2.js"></script>
 <script type="module" src="./task--3.js"></script>
 <script type="module" src="./script.js"></script>
+<script type="module" src="./script1.js"></script>
+
 
 </body>
 
