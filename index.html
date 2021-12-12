@@ -28,31 +28,22 @@
 <!-- определяем эпипс детали -->
 
 <div class="elips-container">
-    <div class="coordinats">
-            <input type="number" placeholder="a" id="a">
-            <input type="number" placeholder="b" id="b">
-            <input type="number" placeholder="c" id="c">
-    </div>
-    <div class="elips-box">
-        <img class="elips-img" src="./image/elips.jpg" alt="image for elips" />
-        
-        <h3 class="elips-title">Элипс = <span id="output-elips">0</span></h3>
-        
-        <svg class="arrow-elips" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true" role="img" width="50px" height="50px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
-            <g fill="none">
-                <path
-                    d="M5.791 6.72a.75.75 0 0 1-.002 1.061L4.566 9H8.25a.75.75 0 0 1 0 1.5H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.061l2.51-2.5a.75.75 0 0 1 1.061.002zm8.429 0a.75.75 0 0 1 1.06 0l2.5 2.5a.75.75 0 0 1 0 1.06l-2.5 2.5a.75.75 0 1 1-1.06-1.06l1.22-1.22h-3.69a.75.75 0 0 1 0-1.5h3.69l-1.22-1.22a.75.75 0 0 1 0-1.06z"
-                    fill="currentColor" />
-            </g>
-        </svg>
-    </div>
-    
+    <button class="btn-open-modal" id="btn-open-modal"> Определить эпипс</button>
 
 </div>
 
+<!-- <select name="project-type" id="project-type" class="project-type-select">
+    <option value="in-the-case"> в корпусе</option>
+    <option value="in-the-product"> в изделии</option>
+</select> -->
+ 
         
-        <h2 class="title-section">Шпонка в корпусе</h2>
+        <h2 class="title-section">Шпонка 
+            <select name="project-type" id="project-type" class="project-type-select">
+            <option value="in-the-case"> в корпусе</option>
+            <option value="in-the-product"> в изделии</option>
+        </select>
+    </h2>
 
 
         <!--значения полученные при измерении-->
@@ -73,7 +64,16 @@
         <br>
     
                 <h3 class="luft">Люфт = <samp id="luft"></samp> </h3>
-                <h5 class="info-text">При визировании с РЕГУЛЯТОРА "+" вверх и вправо </h5>
+
+<h5 class="info-text"> При визировании с
+    <select name="project-vizir" id="project-vizir" class="project-vizir-select">
+        <option value="+ вверх и вправо">РЕГУЛЯТОРА</option>
+        <option value="+ вверх и влево">ГЕНЕРАТОРА</option>
+    
+    </select>
+    <samp id="project-vizir-result"> + вверх и вправо</samp>
+</h5>
+ 
 
         <div class="wrapper-img">
         <!--значения полученные при измерении-->
@@ -108,6 +108,37 @@
 
         </div>
    
+
+        <div class="modal-bgd" id="modal-bgd">
+        
+            <div class="modal-container ">
+                <button class="modal-close-btn">
+                    <img src="./image/icon-close.svg" alt="close">
+                </button>
+                <p class="modal-title"> Определяем эпипс</p>
+                <div class="coordinats">
+                    <input type="number" placeholder="A" id="a">
+                    <input type="number" placeholder="B" id="b">
+                    <input type="number" placeholder="C" id="c">
+                </div>
+                <div class="elips-box">
+                    <img class="elips-img" src="./image/elips.jpg" alt="image for elips" />
+        
+                    <h3 class="elips-title">Элипс = <span id="output-elips">0</span></h3>
+        
+                    <svg class="arrow-elips" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" width="50px" height="50px" preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 20 20">
+                        <g fill="none">
+                            <path
+                                d="M5.791 6.72a.75.75 0 0 1-.002 1.061L4.566 9H8.25a.75.75 0 0 1 0 1.5H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.061l2.51-2.5a.75.75 0 0 1 1.061.002zm8.429 0a.75.75 0 0 1 1.06 0l2.5 2.5a.75.75 0 0 1 0 1.06l-2.5 2.5a.75.75 0 1 1-1.06-1.06l1.22-1.22h-3.69a.75.75 0 0 1 0-1.5h3.69l-1.22-1.22a.75.75 0 0 1 0-1.06z"
+                                fill="currentColor" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        
+        </div>
     </section>
     
     <!--секция если шпонка в детали
@@ -117,10 +148,17 @@
     
         </section>
         -->
+
+        
 </div>
-    
+
+
+
 <script type="module" src="./task--1.js"></script>
 <script type="module" src="./task--2.js"></script>
+<script type="module" src="./task--3.js"></script>
+<script type="module" src="./script.js"></script>
+
 </body>
 
 </html>
