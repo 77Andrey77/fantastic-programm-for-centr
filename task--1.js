@@ -122,7 +122,7 @@ inputRightUpEl.oninput = function () {
 }
 ////////////// перемещения для изменения горизонтальных координат и люфта//////////////////
 
-let outputLElFin = document.querySelector('#outputL-fin');  //вывод левойкоординаты
+let outputLElFin = document.querySelector('#outputL-fin');  //вывод левой координаты
 let outputRElFin = document.querySelector('#outputR-fin');   //вывод правой координаты
 
 
