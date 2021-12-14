@@ -126,7 +126,18 @@ let outputLElFin = document.querySelector('#outputL-fin');  //вывод лев�
 let outputRElFin = document.querySelector('#outputR-fin');   //вывод правой координаты
 
 
+var selectProjectType = document.querySelector('#project-type');
+var infoText1 = document.querySelector('#info-text1');
+var infoText2 = document.querySelector('#info-text2');
 
+
+selectProjectType.addEventListener('change', setProjectType);
+
+function setProjectType() {
+    var choice = selectProjectType.value;
+
+    if (choice === 'in-the-product') {
+         // перемещение влево и право если шпонка в обойме
 inputLeftDownEl.oninput = function () {
     if (inputLeftDownEl === "") {
         outputLEl.textContent= Number(inputLEl.value) + 0
@@ -139,8 +150,8 @@ inputLeftDownEl.oninput = function () {
         outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000 - Number(outputREl.textContent)*1000))/1000
     }
 }
-
-inputRightDownEl.oninput = function () {
+        
+        inputRightDownEl.oninput = function () {
     if (inputRightDownEl === "") {
         outputREl.textContent= Number(inputREl.value) + 0
     } else {
@@ -153,3 +164,82 @@ inputRightDownEl.oninput = function () {
 
     }
 }
+        infoText1.textContent = 'Сдвинуть влево = "+" справа ; "-" слева';
+        infoText2.textContent = 'Сдвинуть вправо = "+" слева ; "-" справа';
+    } else {
+        
+         // перемещение влево и право если шпонка в корпусе
+inputLeftDownEl.oninput = function () {
+    if (inputLeftDownEl === "") {
+        outputLEl.textContent= Number(inputLEl.value) + 0
+    } else {
+        outputLEl.classList.add('deactiv');
+        outputLElFin.classList.remove('deactiv');
+
+        outputLElFin.textContent = (Number(outputLEl.textContent)*1000 + Number(inputLeftDownEl.value)* 1000)/1000
+        
+        outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000 - Number(outputREl.textContent)*1000))/1000
+    }
+}
+        
+        inputRightDownEl.oninput = function () {
+    if (inputRightDownEl === "") {
+        outputREl.textContent= Number(inputREl.value) + 0
+    } else {
+        outputREl.classList.add('deactiv');
+        outputRElFin.classList.remove('deactiv');
+
+        outputRElFin.textContent = (Number(outputREl.textContent) * 1000 - Number(inputRightDownEl.value) * 1000) / 1000
+        
+        outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000- Number(outputRElFin.textContent)*1000))/1000
+
+    }
+}
+
+         infoText1.textContent = 'Сдвинуть влево = "-" справа ; "+" слева';
+        infoText2.textContent = 'Сдвинуть вправо = "-" слева ; "+" справа';
+    }
+        
+    } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+// inputLeftDownEl.oninput = function () {
+//     if (inputLeftDownEl === "") {
+//         outputLEl.textContent= Number(inputLEl.value) + 0
+//     } else {
+//         outputLEl.classList.add('deactiv');
+//         outputLElFin.classList.remove('deactiv');
+
+//         outputLElFin.textContent = (Number(outputLEl.textContent)*1000 - Number(inputLeftDownEl.value)* 1000)/1000
+        
+//         outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000 - Number(outputREl.textContent)*1000))/1000
+//     }
+// }
+
+// inputRightDownEl.oninput = function () {
+//     if (inputRightDownEl === "") {
+//         outputREl.textContent= Number(inputREl.value) + 0
+//     } else {
+//         outputREl.classList.add('deactiv');
+//         outputRElFin.classList.remove('deactiv');
+
+//         outputRElFin.textContent = (Number(outputREl.textContent) * 1000 + Number(inputRightDownEl.value) * 1000) / 1000
+        
+//         outputLuft.textContent= (Math.abs(Number(outputLElFin.textContent)*1000- Number(outputRElFin.textContent)*1000))/1000
+
+//     }
+// }
+
