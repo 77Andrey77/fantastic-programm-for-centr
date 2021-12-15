@@ -193,6 +193,9 @@ section {
   position: relative;
   padding-bottom: 50px;
 }
+.foto-img {
+  width: 500px;
+}
 .foto-none {
   display: none;
 }
@@ -303,4 +306,118 @@ input {
   border-width: 1px;
   border-color: black;
   border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: #4b5380;
+  }
+
+  .title-section {
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .project-type-select {
+    font-size: 30px;
+  }
+  .project-vizir-select {
+    font-size: 20px;
+  }
+  .info-text {
+    font-size: 20px;
+  }
+  .luft {
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .wrapper-img {
+    padding-top: 20px;
+  }
+  /* вывод возле изображения полученых значений при измерении   */
+  .outputL {
+    font-size: 12px;
+    left: 10px;
+    top: 20px;
+  }
+  .outputR {
+    font-size: 12px;
+    left: 320px;
+    top: 20px;
+  }
+
+  .outputL-fin {
+    font-size: 12px;
+    left: 10px;
+    top: 20px;
+  }
+  .outputR-fin {
+    font-size: 12px;
+    left: 320px;
+    top: 20px;
+  }
+  .outputV {
+    font-size: 12px;
+    left: 160px;
+    top: 80px;
+  }
+  /* //////////// */
+  .outputLLedge {
+    font-size: 12px;
+    left: 90px;
+    top: 2px;
+  }
+
+  .outputRLedge {
+    font-size: 12px;
+    left: 210px;
+    top: 2px;
+  }
+  /* //////////// */
+
+  .up-left {
+    font-size: 12px;
+    left: 30px;
+    top: 40px;
+    width: 40px;
+  }
+  .up-right {
+    font-size: 12px;
+    left: 295px;
+    top: 40px;
+    width: 40px;
+  }
+
+  .down-left {
+    font-size: 12px;
+    left: 90px;
+    top: 140px;
+    width: 40px;
+  }
+  .down-right {
+    font-size: 12px;
+    left: 240px;
+    top: 140px;
+    width: 40px;
+  }
+  .st-up-left {
+    width: 20px;
+    left: 205px;
+    top: 120px;
+  }
+  .st-up-right {
+    width: 20px;
+    left: 150px;
+    top: 120px;
+  }
+  /* //////////////////////// */
+  .foto-img {
+    width: 250px;
+  }
+
+  input {
+    font-size: 12px;
+    /* width: 150px; */
+  }
+  /* ////////////////// */
 }
