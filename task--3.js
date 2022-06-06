@@ -1,3 +1,5 @@
+
+
 const openModal = document.querySelector('.btn-open-modal');
 const modalEl = document.querySelector('#modal-bgd');
 
