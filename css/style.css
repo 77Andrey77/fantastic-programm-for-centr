@@ -62,13 +62,13 @@ section {
 }
 .st-up-left {
   position: absolute;
-  left: 555px;
+  left: 535px;
   top: 275px;
   z-index: 2;
 }
 .st-up-right {
   position: absolute;
-  left: 465px;
+  left: 450px;
   top: 275px;
   z-index: 2;
 }
@@ -313,6 +313,7 @@ input {
 @media (max-width: 500px) {
   body {
     background-color: #4b5380;
+    
   }
 
   .title-section {
@@ -327,7 +328,9 @@ input {
     font-size: 20px;
   }
   .info-text {
+    
     font-size: 20px;
+    width: 330px;
   }
   .luft {
     font-size: 15px;
@@ -404,7 +407,7 @@ input {
   }
   .st-up-left {
     width: 20px;
-    left: 210px;
+    left: 200px;
     top: 120px;
   }
   .st-up-right {
